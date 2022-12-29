@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Cadastro de Clientes</h1>
+        <div class="icon">
+            <button class="btn-light" onclick="modoLight()"><ion-icon name="sunny-outline"></ion-icon></button>
+            <button class="btn-dark"  onclick="modoDark()"><ion-icon name="moon-outline"></ion-icon></button>
+        </div>
+    </header>
+
+    <article>
+       <div id="pag-cadastro"> 
+            <button id="cadastro" class="mobile" onclick="modalOpen()">Cadastrar Cliente</button><br>
+            <table id="tbClient">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Celular</th>
+                        <th>Cidade</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <!-- <tr>
+                        <td>Maria</td>
+                        <td>maria@email.com</td>
+                        <td>(11) 99999-9999</td>
+                        <td>Rio de Janeiro</td>
+                        <td>
+                            <button class="green" type="button" onclick="modalOpen()">editar</button>
+                            <button class="red" type="button">excluir</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <header>
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" onclick="modalClose()">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input id="nome" type="text" class="modal-field" data-index="new" placeholder="Nome do Cliente" required>
+                    <input id="email" type="text" class="modal-field" placeholder="E-mail do Cliente" required>
+                    <input id="celular" type="text" class="modal-field" placeholder="Celular do Cliente" required>
+                    <input id="cidade" type="text" class="modal-field" placeholder="Cidade do Cliente" required>
+                </form>
+                <footer>
+                    <button id="salvar" class="green" onclick="saveClient()">salvar</button>
+                    <button class="red" onclick="modalClose()">cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        &copy;Copyright - <a href="https://github.com/analuizadev" target="_blank">Ana Luiza de Castro</a>
+    </footer>
+</body>
+</html>

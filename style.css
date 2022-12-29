@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header{
+    background-color: #FFBA00;
+    position: relative;
+}
+
+header h1{
+    text-align: center;
+    line-height: 20px;
+    padding: 25px;
+    font-weight: bold;
+}
+
+header .icon{
+    position: absolute;
+    top: 0;
+}
+
+.icon button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 5px;
+} 
+
+.icon ion-icon{
+    font-size: 25px;
+}
+
+article{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    margin: 5vh auto;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 9px 7px #d3d3d3;
+    border-radius: 19px;
+}
+
+#cadastro{
+    font-size: 17px;
+    background-color: #20b2f8;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 25px;
+    border-radius: 19px;
+    transition: box-shadow .4s ease;
+}
+
+button:hover{
+    box-shadow: inset 200px 0 0 #00000055;
+}
+
+button.green{
+    background-color: #13CE66;
+    border: none;
+    padding: 8px;
+    color: white;
+    border-radius: 19px;
+    cursor: pointer;
+}
+
+button.red{
+    background-color: #FF4949;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 19px;
+    cursor: pointer;
+}
+
+#tbClient{
+    width: 100%;
+    min-width: 900px;
+    user-select: none;
+    text-align: left;
+}
+
+th{
+    height: 50px;
+    background-color: #FFBA00;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+td{
+    height: 50px;
+    padding-left: 20px;
+}
+
+tr:hover{
+    background-color: #FFF1CC;
+}
+
+th:last-child,
+td:last-child{
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000090;
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.modal header{
+    height: 40px;
+    display: flex;
+    font-size: 1rem;
+    line-height: 40px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.modal h2{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+}
+
+.modal-form{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.modal-field{
+    width: calc(50% - 10px);
+    height: 40px;
+    outline-style: none;
+    border-style: none;
+    box-shadow: 0 0 2px black;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.modal-field:hover{
+    border: 2px solid #20b2f8;    
+}
+
+.modal-field:focus{
+    border: 2px solid #ffd460;
+}
+
+.modal footer{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.modal footer button{
+    font-size: 16px;
+}
+
+.modal-close{
+    display: block;
+    text-align: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    background-color: #FF4949;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(159, 159, 159);
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(159, 159, 159);
+}
+
+footer a:hover{
+    color: #ffd460;
+}
+
+/*------------DARK MODE------------*/
+.dark {
+    background-color: #263238;
+}
+.dark header{
+    background-color: #263238;
+    color: white;
+    box-shadow: 0px 1px 9px 5px #04010b;
+}
+
+.dark article{
+    background-color: #263238;
+    color: white;
+    box-shadow: 0px 1px 9px 5px #04010b;
+}
+
+.dark #cadastro{
+    background-color: #04010b;
+}
+
+.dark #cadastro:hover{
+    box-shadow: inset 200px 0 0 #b9b9b955;
+}
+
+.dark table{
+    background-color: #263238;
+    color: white;
+}
+
+.dark th{
+    background-color: #04010b;
+}
+
+.dark tr:hover{
+    background-color: #84838355;
+}
+
+.dark .icon ion-icon{
+    color: white;
+}
+
+.dark a:hover{
+    color: #04010b;
+}
+
+.dark .modal-content{
+    background-color: #263238;
+}
+
+/*-----Responsivo-----*/
+@media(max-width:480px){
+    .header{
+        position: fixed;
+        width: 100%;
+    }
+    .header-title{
+        font-size: 1.5rem;
+    }
+    article{
+        padding: 0;
+        margin: 15px 0 0 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    button.green,
+    button.red{
+        border-radius: 0px;
+        margin-right: 8px;
+    }
+    .mobile{
+        color: transparent;
+        font-size: 0;
+        width: 150px;
+        height: 57px;
+        border-radius: 50%;
+        position: fixed;
+        top: 83vh;
+        left: 60vw;
+    
+    }
+    #tbClient{
+        border-spacing: 5px;
+    }
+    #tbClient thead{
+        display: none;
+    }
+    #tbClient td:not(:first-child){
+        display: flex;
+    }
+    #tbClient td:last-child{
+        padding-bottom: 9px;
+    }
+    #tbClient tr{
+        box-shadow: 0 1px 3px #00000055;
+    }
+    footer{
+        padding-top: 15px;
+    }
+    .modal{
+        top: 100%;
+        transition: all ease 1s;
+    }
+    .modal.active{
+        top: 0;
+    }
+    .modal-content{
+        transition: left ease 1s;
+        margin: 0;
+        width: 86%;
+        position: fixed;
+    }
+    .modal-field{
+        width: 100%;
+    }
+}
